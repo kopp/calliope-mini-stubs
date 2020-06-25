@@ -102,12 +102,7 @@ It uses code from the package `pseudo-microbit` which is also MIT licensed
   - `i2c`
   - `uart`
   - `spi`
-- module `music`
-- module `os`
 - module `random`
-- module `antigravity`
-- module `this`
-- module `love`
 
 
 
