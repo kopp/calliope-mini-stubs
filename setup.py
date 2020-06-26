@@ -11,7 +11,7 @@ with open("Readme.md", "r") as fh:
 
 setup(
     name="calliope-mini-stubs",
-    version="0.0.2",
+    version="0.0.3",
     author="kopp",
     author_email="kopp.michael@yahoo.de",
     description="Provide stubs with documentation for the MicroPython running on Calliope Mini",
