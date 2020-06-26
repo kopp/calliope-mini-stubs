@@ -1,0 +1,17 @@
+name: Build and Publish package
+on:
+  push:
+    branches:
+      - add_upload_action
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Prepare repo
+        uses: actions/checkout@master
+      - name: Upload
+        uses: onichandame/pip-upload-action@master
+        with:
+          username: '__token__'
+          password: ${{ secrets.PYPI_TOKEN_CALLIOPE_MINI_STUBS }}
+          deps_list: NONE
