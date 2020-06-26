@@ -3,6 +3,7 @@
 
 from typing import Tuple
 
+
 class CalliopeAccelerometer:
     """
     Calliope Mini has a BMX055 sensor which is capable to measure the

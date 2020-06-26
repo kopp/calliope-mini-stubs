@@ -1,7 +1,8 @@
 # document
 # source/microbit/microbitdisplay.cpp
 
-from typing import overload, Union, Iterable
+from typing import Iterable, Union
+
 from .image import MicroBitImage
 
 

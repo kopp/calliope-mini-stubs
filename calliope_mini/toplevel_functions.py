@@ -10,10 +10,12 @@ def panic(n: int = 9999) -> None:
         calliope_mini.panic(255)
     """
 
+
 def reset() -> None:
     """
     Restart the board.
     """
+
 
 def sleep(duration_ms: int) -> None:
     """
@@ -25,12 +27,14 @@ def sleep(duration_ms: int) -> None:
     integer or a floating point number.
     """
 
+
 def running_time() -> int:
     """
     Return the number of milliseconds since the board was switched on or
     restarted.
     """
     return int()
+
 
 def temperature() -> int:
     """

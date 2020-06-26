@@ -20,7 +20,8 @@ class CalliopeMagnetometer:
         The x-axis is parallel to the board and points from the USB connector
         (up) to the small connector holes (down).
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -31,7 +32,8 @@ class CalliopeMagnetometer:
         The y-axis is parallel to the board and points from button B (right)
         to button A (left).
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -42,7 +44,8 @@ class CalliopeMagnetometer:
         The z-axis is perpendicular to the board and points from the side
         with buttons, display etc. (top) to the backside (bottom).
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -51,6 +54,7 @@ class CalliopeMagnetometer:
         Return a tuple with x, y and z components of the magnetic field
         -- see the ``get_x``, ``get_y`` and ``get_z`` methods for more info.
 
-        The result is a tuple with three signed integers with 16 bit, i.e. values between -32768 and 32767.
+        The result is a tuple with three signed integers with 16 bit, i.e.
+        values between -32768 and 32767.
         """
         return (int(), int(), int())

@@ -1,4 +1,4 @@
-from  typing import Union
+from typing import Union
 
 
 class MicroBitDigitalPin:
@@ -81,7 +81,7 @@ class MicroBitDigitalPin:
         """Set the pull state to one of three possible values: ``pin.PULL_UP``,
         ``pin.PULL_DOWN`` or ``pin.NO_PULL`` (where ``pin`` is an instance of
         a pin).
-        
+
         See class ``MicroBitDigitalPin`` for more info.
         """
         ...

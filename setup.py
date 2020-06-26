@@ -1,8 +1,4 @@
-import os
-
-from typing import List
-
-from setuptools import find_packages, setup
+from setuptools import setup
 
 
 with open("Readme.md", "r") as fh:
@@ -11,7 +7,7 @@ with open("Readme.md", "r") as fh:
 
 setup(
     name="calliope-mini-stubs",
-    version="0.0.3",
+    version="0.0.4",
     author="kopp",
     author_email="kopp.michael@yahoo.de",
     description="Provide stubs with documentation for the MicroPython running on Calliope Mini",

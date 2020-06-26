@@ -32,7 +32,8 @@ class CalliopeGyrometer:
         The value is positive, if the board is rotated around the x-axis
         such that Button A is moved downwards.
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -46,7 +47,8 @@ class CalliopeGyrometer:
         The value is positive, if the board is rotated around the y-axis
         such that the USB connector is moved upwards.
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -61,7 +63,8 @@ class CalliopeGyrometer:
         such that the USB connector is moved to the left (in direction of
         Button A).
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -70,6 +73,7 @@ class CalliopeGyrometer:
         Return a tuple with x, y and z components of the rotation
         -- see the ``get_x``, ``get_y`` and ``get_z`` methods for more info.
 
-        The result is a tuple with three signed integers with 16 bit, i.e. values between -32768 and 32767.
+        The result is a tuple with three signed integers with 16 bit, i.e.
+        values between -32768 and 32767.
         """
         return (int(), int(), int())
