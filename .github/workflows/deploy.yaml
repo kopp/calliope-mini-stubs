@@ -1,4 +1,5 @@
-name: Build the package and publish it to pypi
+name: Build and Publish
+# Note: keep the name short so that it is properly displayed in the web ui
 
 on: push
 
@@ -7,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - uses: actions/setup-python@v2
-    - uses: casperdcl/deploy-pypi@v1
+    - name: Deploy to PyPi
+      uses: casperdcl/deploy-pypi@v1
       with:
-        build: true
         password: ${{ secrets.PYPI_TOKEN_CALLIOPE_MINI_STUBS }}
+        deps_list: NONE
