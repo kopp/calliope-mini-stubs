@@ -1,0 +1,19 @@
+name: Build and Publish
+# Note: keep the name short so that it is properly displayed in the web ui
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy to PyPi
+      uses: onichandame/pip-upload-action@master
+      with:
+        username: __token__
+        password: ${{ secrets.PYPI_TOKEN_CALLIOPE_MINI_STUBS }}
+        deps_list: NONE
