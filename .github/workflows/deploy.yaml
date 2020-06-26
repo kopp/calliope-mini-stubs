@@ -11,5 +11,6 @@ jobs:
     - name: Deploy to PyPi
       uses: onichandame/pip-upload-action@master
       with:
+        username: __token__
         password: ${{ secrets.PYPI_TOKEN_CALLIOPE_MINI_STUBS }}
         deps_list: NONE
