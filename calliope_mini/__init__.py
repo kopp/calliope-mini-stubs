@@ -36,6 +36,7 @@ from .sensor import CalliopeSensor
 from .led import CalliopeLED
 from .pin import MicroBitAnalogDigitalPin, MicroBitDigitalPin, MicroBitTouchPin
 from .i2c import MicroBitI2C
+from .uart import MicroBitUART
 
 
 display = MicroBitDisplay()
@@ -58,6 +59,8 @@ sensor = CalliopeSensor()
 led = CalliopeLED()
 
 i2c = MicroBitI2C()
+
+uart = MicroBitUART()
 
 
 # types in source/microbit/microbitpin.cpp

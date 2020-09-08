@@ -99,7 +99,6 @@ It uses code from the package `pseudo-microbit` which is also MIT licensed
 # Currently missing in this library
 
 - in module `calliope_mini`
-  - `uart`
   - `spi`
 - module `random`
 
