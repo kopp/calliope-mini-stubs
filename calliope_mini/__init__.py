@@ -14,6 +14,7 @@ __all__ = [
     "reset", "sleep", "running_time", "panic", "temperature",
     "magnetometer", "gyrometer", "accelerometer", "sensor",
     "led",
+    "i2c",
     "pin0", "pin1", "pin2", "pin3", "pin4", "pin5", "pin6", "pin7", "pin8",
     "pin9", "pin10", "pin11", "pin12", "pin13", "pin14", "pin15", "pin16",
     "pin17", "pin18", "pin19", "pin20", "pin21", "pin22", "pin23", "pin24",
@@ -34,6 +35,7 @@ from .accelerometer import CalliopeAccelerometer
 from .sensor import CalliopeSensor
 from .led import CalliopeLED
 from .pin import MicroBitAnalogDigitalPin, MicroBitDigitalPin, MicroBitTouchPin
+from .i2c import MicroBitI2C
 
 
 display = MicroBitDisplay()
@@ -54,6 +56,8 @@ sensor = CalliopeSensor()
 
 
 led = CalliopeLED()
+
+i2c = MicroBitI2C()
 
 
 # types in source/microbit/microbitpin.cpp
