@@ -15,7 +15,7 @@ propose functions that are not available in MicroPython.
 To read from/write to those files, use e.g. ``open(filename, "r")``.
 """
 
-from typing import Tuple, List
+from typing import List, Tuple
 
 
 def remove(filename: str) -> None:

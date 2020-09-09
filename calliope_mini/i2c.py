@@ -1,8 +1,8 @@
 # source/microbit/microbiti2c.cpp
 
-from . import c18, c19
-
 from typing import List, Union
+
+from . import c18, c19
 
 
 class MicroBitI2C:
@@ -26,20 +26,22 @@ class MicroBitI2C:
 
     def init(self: "MicroBitI2C", freq: int = 100000,
              sda: int = c18, scl: int = c19) -> None:
-        """(Re-)initialize peripheral with the specified clock frequency ``freq`` on the
-        specified ``sda`` and ``scl`` pins.
+        """(Re-)initialize peripheral with the specified clock frequency
+        ``freq`` on the specified ``sda`` and ``scl`` pins.
 
         .. warning::
 
             Changing the I²C pins from defaults will make the accelerometer and
-            compass stop working, as they are connected internally to those pins.
+            compass stop working, as they are connected internally to those
+            pins.
         """
 
     def scan(self: "MicroBitI2C") -> List[int]:
         """
         Scan for available i2c slaves and return a list of addresses.
 
-        For all addresses in the range 0x08 to 0x78 an empty write is performed.
+        For all addresses in the range 0x08 to 0x78 an empty write is
+        performed.
         A slave should react with an ACK.
         All addresses, for which a slave reacted this way, are returned.
         """
@@ -47,8 +49,8 @@ class MicroBitI2C:
 
     def read(self: "MicroBitI2C", addr: int, n: int,
              repeat: bool = False) -> bytes:
-        """Read ``n`` bytes from the device with 7-bit address ``addr``. If ``repeat``
-        is ``True``, no stop bit will be sent.
+        """Read ``n`` bytes from the device with 7-bit address ``addr``. If
+        ``repeat`` is ``True``, no stop bit will be sent.
 
         May raise an OSError.
         """
@@ -56,8 +58,8 @@ class MicroBitI2C:
 
     def write(self: "MicroBitI2C", addr: int,
               buf: Union[bytes, bytearray], repeat=False) -> None:
-        """Write bytes from ``buf`` to the device with 7-bit address ``addr``. If
-        ``repeat`` is ``True``, no stop bit will be sent.
+        """Write bytes from ``buf`` to the device with 7-bit address ``addr``.
+        If ``repeat`` is ``True``, no stop bit will be sent.
 
         May raise an OSError.
         """

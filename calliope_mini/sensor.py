@@ -182,7 +182,8 @@ class CalliopeSensor:
         The z-axis is perpendicular to the board and points from the side
         with buttons, display etc. (top) to the backside (bottom).
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 

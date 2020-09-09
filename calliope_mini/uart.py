@@ -114,7 +114,8 @@ class MicroBitUART:
 
     @overload
     def write(self: "MicroBitUART",
-              buf: Union[str, bytes, bytearray], length: int = None) -> Optional[int]:
+              buf: Union[str, bytes, bytearray],
+              length: int = None) -> Optional[int]:
         ...
 
     def write(self, *args):
