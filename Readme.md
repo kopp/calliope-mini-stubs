@@ -96,12 +96,6 @@ It uses code from the package `pseudo-microbit` which is also MIT licensed
     in the accompanying AUTHORS file
 
 
-# Currently missing in this library
-
-- module `random`
-
-
-
 # On Stub Files
 
 Generatlly, stubs should be distributed in the form of `.pyi` files -- one
