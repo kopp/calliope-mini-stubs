@@ -16,6 +16,12 @@ developed code to the Calliope Mini.
 # Setup VSCode
 
 - Install the [`ms-python.python`](https://marketplace.visualstudio.com/items?itemName=ms-python.python) extension.
+- Create a
+  [virtual environment](https://docs.python.org/3/tutorial/venv.html),
+  via `python -m venv <name>` and activate it.
+  **Note**: Make sure to install this only in a local virtual environment (and
+  not system-wide) as some libraries overwrite "system" libraries and thus
+  make scripts that are not intended to run on the Calliope Mini fail.
 - `pip install calliope-mini-stubs` to get this package installed.
 - Select the correct python (e.g. if you `pip installed` into a
   [virtual environment](https://docs.python.org/3/tutorial/venv.html),

@@ -6,7 +6,7 @@ GITHUB_URL = "https://github.com/kopp/calliope-mini-stubs"
 
 setup(
     name="calliope-mini-stubs",
-    version="0.0.6",
+    version="0.1.0",
     author="kopp",
     description="Provide stubs with documentation for the MicroPython running on Calliope Mini",
     long_description="""# CalliopeMini Stubs
@@ -22,6 +22,9 @@ function signatures.
 It does not contain a simulator/emulator and it does not allow to transfer the
 developed code to the Calliope Mini.
 
+Make sure to install this only in a local virtual environment as some
+libraries overwrite "system" libraries and thus make scripts that are not
+intended to run on the Calliope Mini fail.
 
 
 Please see
