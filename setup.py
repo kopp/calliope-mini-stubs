@@ -1,3 +1,7 @@
+import move_this_directory_in_path  # Import before setuptools:
+# Since this folder contains a `random` module which conflicts with the
+# system's random module, make sure that the system's module is found when
+# using `import random`.
 from setuptools import setup
 
 
@@ -34,7 +38,17 @@ for how a simple step-by-step instruction how to use it.
     """.format(GITHUB_URL),
     long_description_content_type="text/markdown",
     url=GITHUB_URL,
-    packages=["calliope_mini", "radio", "utime"],
+    packages=[
+        "antigravity",
+        "calliope_mini",
+        "love",
+        "music",
+        "os",
+        "radio",
+        "random",
+        "this",
+        "utime",
+    ],
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
