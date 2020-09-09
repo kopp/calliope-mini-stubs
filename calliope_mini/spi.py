@@ -3,7 +3,8 @@
 
 from typing import Union
 
-from . import MicroBitDigitalPin, pin13, pin14, pin15
+from .pin import MicroBitDigitalPin
+from .pin_instances import pin13, pin14, pin15
 
 
 class MicroBitSPI:

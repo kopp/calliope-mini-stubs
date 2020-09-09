@@ -2,7 +2,7 @@
 
 from typing import List, Union
 
-from . import c18, c19
+from .pin_instances import c18, c19
 
 
 class MicroBitI2C:
