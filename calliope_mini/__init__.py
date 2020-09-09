@@ -34,8 +34,7 @@ from .i2c import MicroBitI2C
 from .image import MicroBitImage
 from .led import CalliopeLED
 from .magnetometer import CalliopeMagnetometer
-from .pin import MicroBitAnalogDigitalPin, MicroBitDigitalPin, MicroBitTouchPin
-from .pin_instances import (
+from .pin_instances import (  # noqa: I101
     pin0, pin1, pin2, pin3, pin4, pin5, pin6, pin7, pin8,
     pin9, pin10, pin11, pin12, pin13, pin14, pin15, pin16,
     pin17, pin18, pin19, pin20, pin21, pin22, pin23, pin24,

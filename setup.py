@@ -14,7 +14,7 @@ GITHUB_URL = "https://github.com/kopp/calliope-mini-stubs"
 
 setup(
     name="calliope-mini-stubs",
-    version="0.1.1",
+    version="0.1.2",
     author="kopp",
     description=("Provide stubs with documentation for "
                  "MicroPython running on Calliope Mini"),
