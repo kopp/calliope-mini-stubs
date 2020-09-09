@@ -12,9 +12,9 @@ class MicroBitDigitalPin:
     (See also the ``get/set_analog_period`` commands for how to specify the
     period duration.
 
-    The pins also have built-in pull up/pull down resistors.
-    The pull mode for a pin is automatically configured when the pin changes to an
-    input mode. Input modes are when you call ``read_analog`` / ``read_digital`` /
+    The pins also have built-in pull up/pull down resistors.  The pull mode for
+    a pin is automatically configured when the pin changes to an input mode.
+    Input modes are when you call ``read_analog`` / ``read_digital`` /
     ``is_touched``. The pull mode for these is, respectively, ``NO_PULL``,
     ``PULL_DOWN``, ``PULL_UP``. Only when in ``read_digital`` mode can you call
     ``set_pull`` to change the pull mode from the default.
@@ -55,7 +55,8 @@ class MicroBitDigitalPin:
         """Output a PWM signal on the pin, with the duty cycle proportional to
         the provided ``value``. The ``value`` may be either an integer or a
         floating point number.
-        For both integers and floats use values between 0 (0% duty cycle) and 1023 (100% duty).
+        For both integers and floats use values between 0 (0% duty cycle) and
+        1023 (100% duty).
         """
         ...
 
@@ -88,7 +89,8 @@ class MicroBitDigitalPin:
 
     def get_pull(self) -> int:
         """
-        Return the pull mode the pin is in (``NO_PULL``, ``PULL_UP``, ``PULL_DOWN``).
+        Return the pull mode the pin is in (``NO_PULL``, ``PULL_UP``,
+        ``PULL_DOWN``).
 
         See class ``MicroBitDigitalPin`` for more info.
         """
@@ -117,8 +119,8 @@ class MicroBitAnalogDigitalPin(MicroBitDigitalPin):
 
 class MicroBitTouchPin(MicroBitAnalogDigitalPin):
     """
-    Pins of this class have all capabilities as ``MicroBitAnalogDigitalPin``s, and
-    additionally can tell, whether they are touched with a finger or not.
+    Pins of this class have all capabilities as ``MicroBitAnalogDigitalPin``s,
+    and additionally can tell, whether they are touched with a finger or not.
     See ``is_touched``.
     """
     def is_touched(self) -> bool:

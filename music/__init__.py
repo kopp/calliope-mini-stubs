@@ -3,14 +3,14 @@ Calliope Mini has a small speaker on-board.
 
 To control that, use this library.
 
-It is also possible to attach a speaker to Calliope Mini.
-To do so, attach pin 0 and GND to the positive and negative inputs on the
-speaker -- it doesn’t matter which way round they are connected to the speaker.
+It is also possible to attach a speaker to Calliope Mini.  To do so, attach pin
+0 and GND to the positive and negative inputs on the speaker -- it doesn’t
+matter which way round they are connected to the speaker.
 
 Note, that on the Calliope Mini the pin30 is used to play music with the
 on-board speaker and to control a motor attached to the 6 pin row on the bottom
-(5 pins in older versions).
-When music is played, the pins 28 and 29 get disabled, i.e. attached motors stop.
+(5 pins in older versions).  When music is played, the pins 28 and 29 get
+disabled, i.e. attached motors stop.
 
 Musical Notation
 
@@ -18,20 +18,21 @@ Musical Notation
 
     NOTE[octave][:duration]
 
-    For example, A1:4 refers to the note “A” in octave 1 that lasts for four ticks
-     (a tick is an arbitrary length of time defined by a tempo setting function -
-     see below). If the note name R is used then it is treated as a rest (silence).
+    For example, A1:4 refers to the note “A” in octave 1 that lasts for four
+    ticks (a tick is an arbitrary length of time defined by a tempo setting
+    function - see below). If the note name R is used then it is treated as a
+    rest (silence).
 
-    Accidentals (flats and sharps) are denoted by the b
-    (flat - a lower case b) and # (sharp - a hash symbol).
-    For example, Ab is A-flat and C# is C-sharp.
+    Accidentals (flats and sharps) are denoted by the b (flat - a lower case b)
+    and # (sharp - a hash symbol).  For example, Ab is A-flat and C# is
+    C-sharp.
 
     Note names are case-insensitive.
 
-    The octave and duration parameters are states that carry over to
-    subsequent notes until re-specified. The default states are octave = 4
-    (containing middle C) and duration = 4 (a crotchet, given the default
-    tempo settings - see below).
+    The octave and duration parameters are states that carry over to subsequent
+    notes until re-specified. The default states are octave = 4 (containing
+    middle C) and duration = 4 (a crotchet, given the default tempo settings -
+    see below).
 
     For example, if 4 ticks is a crotchet, the following list is crotchet,
     quaver, quaver, crotchet based arpeggio:
@@ -42,18 +43,19 @@ Musical Notation
 
     ['r4:2', 'g', 'g', 'g', 'eb:8', 'r:2', 'f', 'f', 'f', 'd:8']
 
-    The definition and scope of an octave conforms to the table
-    listed on this page about scientific pitch notation. For example, middle “C” is
-    c4' and concert “A” (440) is 'a4'. Octaves start on the note “C”.
-    The definition and scope of an octave conforms to the table
-    listed on this page about scientific pitch notation. For example, middle
-    “C” is 'c4' and concert “A” (440) is 'a4'. Octaves start on the note “C”.
+    The definition and scope of an octave conforms to the table listed on this
+    page about scientific pitch notation. For example, middle “C” is c4' and
+    concert “A” (440) is 'a4'. Octaves start on the note “C”.  The definition
+    and scope of an octave conforms to the table listed on this page about
+    scientific pitch notation. For example, middle “C” is 'c4' and concert “A”
+    (440) is 'a4'. Octaves start on the note “C”.
 
 
         Built in Melodies
 
         For the purposes of education and entertainment, the module contains
-        several example tunes that are expressed as Python lists. They can be used like this:
+        several example tunes that are expressed as Python lists. They can be
+        used like this:
 
      import music
      music.play(music.NYAN)
@@ -73,7 +75,8 @@ Musical Notation
               J.S.Bach’s 48 Preludes and Fugues.
     ODE - the “Ode to Joy” theme from Beethoven’s 9th Symphony in D minor.
     NYAN - the Nyan Cat theme (http://www.nyan.cat/). The composer is unknown.
-           This is fair use for educational porpoises (as they say in New York).
+           This is fair use for educational porpoises (as they say in New
+           York).
     RINGTONE - something that sounds like a mobile phone ringtone. To be used
                to indicate an incoming message.
     FUNK - a funky bass line for secret agents and criminal masterminds.
@@ -99,24 +102,29 @@ Musical Notation
     Example
 
         Plays a simple tune using the Micropython music module.
-        This example requires a speaker/buzzer/headphones connected to P0 and GND.
+        This example requires a speaker/buzzer/headphones connected to P0 and
+        GND.
 
     import music
 
     # play Prelude in C.
     notes = [
-        'c4:1', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5',
-        'c4', 'd', 'g', 'd5', 'f5', 'g4', 'd5', 'f5', 'c4', 'd', 'g', 'd5', 'f5', 'g4', 'd5', 'f5',
-        'b3', 'd4', 'g', 'd5', 'f5', 'g4', 'd5', 'f5', 'b3', 'd4', 'g', 'd5', 'f5', 'g4', 'd5', 'f5',
-        'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5',
-        'c4', 'e', 'a', 'e5', 'a5', 'a4', 'e5', 'a5', 'c4', 'e', 'a', 'e5', 'a5', 'a4', 'e5', 'a5',
-        'c4', 'd', 'f#', 'a', 'd5', 'f#4', 'a', 'd5', 'c4', 'd', 'f#', 'a', 'd5', 'f#4', 'a', 'd5',
-        'b3', 'd4', 'g', 'd5', 'g5', 'g4', 'd5', 'g5', 'b3', 'd4', 'g', 'd5', 'g5', 'g4', 'd5', 'g5',
-        'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5', 'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5',
-        'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5', 'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5',
-        'a3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5', 'a3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5',
-        'd3', 'a', 'd4', 'f#', 'c5', 'd4', 'f#', 'c5', 'd3', 'a', 'd4', 'f#', 'c5', 'd4', 'f#', 'c5',
-        'g3', 'b', 'd4', 'g', 'b', 'd', 'g', 'b', 'g3', 'b3', 'd4', 'g', 'b', 'd', 'g', 'b'
+        'c4:1', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', 'g', 'c5',
+        'e5', 'g4', 'c5', 'e5', 'c4', 'd', 'g', 'd5', 'f5', 'g4', 'd5', 'f5',
+        'c4', 'd', 'g', 'd5', 'f5', 'g4', 'd5', 'f5', 'b3', 'd4', 'g', 'd5',
+        'f5', 'g4', 'd5', 'f5', 'b3', 'd4', 'g', 'd5', 'f5', 'g4', 'd5', 'f5',
+        'c4', 'e', 'g', 'c5', 'e5', 'g4', 'c5', 'e5', 'c4', 'e', 'g', 'c5',
+        'e5', 'g4', 'c5', 'e5', 'c4', 'e', 'a', 'e5', 'a5', 'a4', 'e5', 'a5',
+        'c4', 'e', 'a', 'e5', 'a5', 'a4', 'e5', 'a5', 'c4', 'd', 'f#', 'a',
+        'd5', 'f#4', 'a', 'd5', 'c4', 'd', 'f#', 'a', 'd5', 'f#4', 'a', 'd5',
+        'b3', 'd4', 'g', 'd5', 'g5', 'g4', 'd5', 'g5', 'b3', 'd4', 'g', 'd5',
+        'g5', 'g4', 'd5', 'g5', 'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5',
+        'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5', 'b3', 'c4', 'e', 'g',
+        'c5', 'e4', 'g', 'c5', 'b3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5',
+        'a3', 'c4', 'e', 'g', 'c5', 'e4', 'g', 'c5', 'a3', 'c4', 'e', 'g',
+        'c5', 'e4', 'g', 'c5', 'd3', 'a', 'd4', 'f#', 'c5', 'd4', 'f#', 'c5',
+        'd3', 'a', 'd4', 'f#', 'c5', 'd4', 'f#', 'c5', 'g3', 'b', 'd4', 'g',
+        'b', 'd', 'g', 'b', 'g3', 'b3', 'd4', 'g', 'b', 'd', 'g', 'b'
     ]
 
     music.play(notes)
@@ -154,7 +162,7 @@ __ALL__ = [
 ]
 
 
-from typing import Tuple, Union, List
+from typing import List, Tuple, Union
 
 from calliope_mini import pin30
 
@@ -247,8 +255,8 @@ def pitch(frequency: int,
     the length to 1000 then we hear a standard concert A for one second.
 
     If the duration is negative, the pitch is played continuously until
-    either the blocking call is interrupted or, in the case of a background call,
-    a new frequency is set or ``stop()`` is called.
+    either the blocking call is interrupted or, in the case of a background
+    call, a new frequency is set or ``stop()`` is called.
 
     For ``wait`` and ``pin`` see ``play``.
     """

@@ -5,18 +5,21 @@ from typing import Tuple
 
 class CalliopeLED:
     """
-    Calliope Mini has a color-LED which is similar to a NeoPixel strip with only one LED.
+    Calliope Mini has a color-LED which is similar to a NeoPixel strip with
+    only one LED.
 
-    The driver in use is based on this one: https://github.com/lavallc/nrf51-neopixel
+    The driver in use is based on this one:
+    https://github.com/lavallc/nrf51-neopixel
     """
 
     def set_red(self: "CalliopeLED", brightness_red: int) -> None:
         """
         Set the brightness for the red component of the LED.
 
-        Use values between 0 (dark/off) and 255 (maximal brightness) to
-        control the brightness.
-        Values out of that range will be mapped into that range using ``value % 256``.
+        Use values between 0 (dark/off) and 255 (maximal brightness) to control
+        the brightness.
+        Values out of that range will be mapped into that range using ``value %
+        256``.
         """
 
     def set_green(self: "CalliopeLED", brightness_green: int) -> None:
@@ -25,7 +28,8 @@ class CalliopeLED:
 
         Use values between 0 (dark/off) and 255 (maximal brightness) to
         control the brightness.
-        Values out of that range will be mapped into that range using ``value % 256``.
+        Values out of that range will be mapped into that range using ``value %
+        256``.
         """
 
     def set_blue(self: "CalliopeLED", brightness_blue: int) -> None:
@@ -34,7 +38,8 @@ class CalliopeLED:
 
         Use values between 0 (dark/off) and 255 (maximal brightness) to
         control the brightness.
-        Values out of that range will be mapped into that range using ``value % 256``.
+        Values out of that range will be mapped into that range using ``value %
+        256``.
         """
 
     def get_red(self: "CalliopeLED") -> int:
@@ -61,13 +66,17 @@ class CalliopeLED:
         """
         return int()
 
-    def set_colors(self: "CalliopeLED", brightness_red: int, brightness_green: int, brightness_blue: int) -> None:
+    def set_colors(self: "CalliopeLED",
+                   brightness_red: int,
+                   brightness_green: int,
+                   brightness_blue: int) -> None:
         """
         Set the brightness for all components of the LED (red, green, blue).
 
         Use values between 0 (dark/off) and 255 (maximal brightness) to
         control the brightnesses.
-        Values out of that range will be mapped into that range using ``value % 256``.
+        Values out of that range will be mapped into that range using ``value %
+        256``.
 
         .. note::
             This corresponds to the HTML notation of colors.

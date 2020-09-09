@@ -2,17 +2,19 @@
 
 The radio module is conceptually very simple:
 
-* Broadcast messages are of a certain configurable length (up to 251 bytes).
-* Messages received are read from a queue of configurable size (the larger the
+- Broadcast messages are of a certain configurable length (up to 251 bytes).
+- Messages received are read from a queue of configurable size (the larger the
   queue the more RAM is used). If the queue is full, new messages are ignored.
-* Messages are broadcast and received on a preselected channel (numbered 0-100).
-* Broadcasts are at a certain level of power - more power means more range.
-* Messages are filtered by address (like a house number) and group (like a
+- Messages are broadcast and received on a preselected channel (numbered
+  0-100).
+- Broadcasts are at a certain level of power - more power means more range.
+- Messages are filtered by address (like a house number) and group (like a
   named recipient at the specified address).
-* The rate of throughput can be one of three pre-determined settings.
-* Send and receieve bytes to work with arbitrary data.
-* As a convenience for children, it's easy to send and receive messages as strings.
-* The default configuration is both sensible and compatible with other
+- The rate of throughput can be one of three pre-determined settings.
+- Send and receieve bytes to work with arbitrary data.
+- As a convenience for children, it's easy to send and receive messages as
+  strings.
+- The default configuration is both sensible and compatible with other
   platforms that target the BBC micro:bit.
 
 To use the BlueTooth module you need to::
@@ -139,8 +141,8 @@ def config(length: int = 32, queue: int = 3, channel: int = 7,
 
 
 def reset() -> None:
-    """Reset the settings to their default values (as listed in the documentation
-    for the ``config`` function above).
+    """Reset the settings to their default values (as listed in the
+    documentation for the ``config`` function above).
     """
 
 
@@ -165,10 +167,10 @@ def receive_bytes() -> Optional[bytes]:
 
 
 def receive_bytes_into(buffer: bytearray) -> Optional[int]:
-    """Receive the next incoming message on the message queue. Copies the message
-    into ``buffer``, trimming the end of the message if necessary.
-    Returns ``None`` if there are no pending messages, otherwise it returns the length
-    of the message (which might be more than the length of the buffer).
+    """Receive the next incoming message on the message queue. Copies the
+    message into ``buffer``, trimming the end of the message if necessary.
+    Returns ``None`` if there are no pending messages, otherwise it returns the
+    length of the message (which might be more than the length of the buffer).
     """
     return int()
 

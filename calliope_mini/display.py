@@ -25,7 +25,8 @@ class MicroBitDisplay:
 
     # microbit_display_show_func
     def show(self: "MicroBitDisplay",
-             image: Union[Union[str, MicroBitImage], Iterable[Union[str, MicroBitImage]]],
+             image: Union[Union[str, MicroBitImage],
+                          Iterable[Union[str, MicroBitImage]]],
              delay: int = 150,
              *,  # remainder is keyword only
              clear: bool = False,

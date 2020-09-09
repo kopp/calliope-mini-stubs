@@ -20,7 +20,8 @@ class CalliopeAccelerometer:
     #       See the init(..) function of BMX055 in
     #       inc/lib/bmx055.h
     #       where the parameters are selected.
-    #       Currently, this is a range of 2g and 15.63 Hz bandwidth, 32 ms update time.
+    #       Currently, this is a range of 2g and 15.63 Hz bandwidth, 32 ms
+    #       update time.
     #       See also the datasheet
     #       https://www.mouser.de/datasheet/2/783/BST-BMX055-DS000-1509552.pdf
     #       and an explanation for LSB/degree/sec here
@@ -30,8 +31,8 @@ class CalliopeAccelerometer:
         """
         Return the x-component of the acceleration.
 
-        Note: For the accelerometer to deliver reasonable values, turn the device
-        on when it is lying flat on its back on an even surface.
+        Note: For the accelerometer to deliver reasonable values, turn the
+        device on when it is lying flat on its back on an even surface.
 
         The x-axis is parallel to the board and points from the USB connector
         (up) to the small connector holes (down).
@@ -39,7 +40,8 @@ class CalliopeAccelerometer:
         The value is positive, if the acceleration is going into the
         direction of the USB connector.
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -47,8 +49,8 @@ class CalliopeAccelerometer:
         """
         Return the y-component of the acceleration.
 
-        Note: For the accelerometer to deliver reasonable values, turn the device
-        on when it is lying flat on its back on an even surface.
+        Note: For the accelerometer to deliver reasonable values, turn the
+        device on when it is lying flat on its back on an even surface.
 
         The y-axis is parallel to the board and points from button B (right)
         to button A (left).
@@ -56,7 +58,8 @@ class CalliopeAccelerometer:
         The value is positive, when the acceleration is going into the
         direction of Button A.
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -64,8 +67,8 @@ class CalliopeAccelerometer:
         """
         Return the z-component of the acceleration.
 
-        Note: For the accelerometer to deliver reasonable values, turn the device
-        on when it is lying flat on its back on an even surface.
+        Note: For the accelerometer to deliver reasonable values, turn the
+        device on when it is lying flat on its back on an even surface.
 
         The z-axis is perpendicular to the board and points from the side
         with buttons, display etc. (top) to the backside (bottom).
@@ -73,7 +76,8 @@ class CalliopeAccelerometer:
         The value is positive, when the acceleration is going into the
         direction of the bottom of the board.
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -82,6 +86,7 @@ class CalliopeAccelerometer:
         Return a tuple with x, y and z components of the acceleration
         -- see the ``get_x``, ``get_y`` and ``get_z`` methods for more info.
 
-        The result is a tuple with three signed integers with 16 bit, i.e. values between -32768 and 32767.
+        The result is a tuple with three signed integers with 16 bit, i.e.
+        values between -32768 and 32767.
         """
         return (int(), int(), int())

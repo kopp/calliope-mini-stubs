@@ -8,7 +8,8 @@ setup(
     name="calliope-mini-stubs",
     version="0.1.0",
     author="kopp",
-    description="Provide stubs with documentation for the MicroPython running on Calliope Mini",
+    description=("Provide stubs with documentation for "
+        "MicroPython running on Calliope Mini"),
     long_description="""# CalliopeMini Stubs
 
 Use this library to develop your python programs for the

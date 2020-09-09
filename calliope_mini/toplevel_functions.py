@@ -4,7 +4,8 @@
 def panic(n: int = 9999) -> None:
     """
     Enter a panic mode.
-    To leave this mode, restart the Calliope mini (remove/apply power or press the reset button).
+    To leave this mode, restart the Calliope mini (remove/apply power or press
+    the reset button).
     Pass in an arbitrary integer to indicate a status::
 
         calliope_mini.panic(255)
@@ -19,7 +20,8 @@ def reset() -> None:
 
 def sleep(duration_ms: int) -> None:
     """
-    Wait for ``duration_ms`` milliseconds. One second is 1000 milliseconds, so::
+    Wait for ``duration_ms`` milliseconds. One second is 1000 milliseconds,
+    so::
 
         calliope_mini.sleep(1000)
 

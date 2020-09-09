@@ -5,7 +5,7 @@
 This library provides functions to work with random numbers.
 It is similar to the "real" random library
 (see https://docs.python.org/3/library/random.html)
-but only supports 
+but only supports
 - ``getrandbits``
 - ``seed``
 - ``randrange``
@@ -30,9 +30,11 @@ __all__ = [
     "uniform",
 ]
 
+
 def getrandbits(number_of_bits: int) -> int:
     """Return an interger with ``number_of_bits`` random bits."""
     return int()
+
 
 def seed(seed_value: int = None) -> None:
     """
@@ -41,6 +43,7 @@ def seed(seed_value: int = None) -> None:
     If no seed value is supplied, the NRF51822's in built cryptographic
     random number generator is used to generate one.
     """
+
 
 def randrange(start: int, stop: Optional[int] = None, step: int = 1) -> int:
     """
@@ -53,12 +56,14 @@ def randrange(start: int, stop: Optional[int] = None, step: int = 1) -> int:
     """
     return int()
 
+
 def randint(start: int, stop: int) -> int:
     """
     Return a random integer i such that ``start <= i <= stop``. Alias for
     ``randrange(start, stop+1)``.
     """
     return int()
+
 
 def choice(sequence: Sequence[_T]) -> _T:
     """
@@ -67,9 +72,11 @@ def choice(sequence: Sequence[_T]) -> _T:
     """
     return sequence[0]
 
+
 def random() -> float:
     """Return a random floating point number between 0 and 1 (1 excluded)."""
     return float()
+
 
 def uniform(start: float, stop: float) -> float:
     """

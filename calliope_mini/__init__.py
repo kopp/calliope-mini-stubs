@@ -26,19 +26,19 @@ __all__ = [
 ]
 
 
-from .display import MicroBitDisplay
-from .image import MicroBitImage
-from .button import MicroBitButton
-from .toplevel_functions import reset, sleep, running_time, panic, temperature
-from .magnetometer import CalliopeMagnetometer
-from .gyrometer import CalliopeGyrometer
 from .accelerometer import CalliopeAccelerometer
-from .sensor import CalliopeSensor
-from .led import CalliopeLED
-from .pin import MicroBitAnalogDigitalPin, MicroBitDigitalPin, MicroBitTouchPin
+from .button import MicroBitButton
+from .display import MicroBitDisplay
+from .gyrometer import CalliopeGyrometer
 from .i2c import MicroBitI2C
-from .uart import MicroBitUART
+from .image import MicroBitImage
+from .led import CalliopeLED
+from .magnetometer import CalliopeMagnetometer
+from .pin import MicroBitAnalogDigitalPin, MicroBitDigitalPin, MicroBitTouchPin
+from .sensor import CalliopeSensor
 from .spi import MicroBitSPI
+from .toplevel_functions import panic, reset, running_time, sleep, temperature
+from .uart import MicroBitUART
 
 
 display = MicroBitDisplay()

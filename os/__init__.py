@@ -28,7 +28,7 @@ def listdir() -> List[str]:
     """
     Return a list of all known files on the filesystem.
     """
-    return list()
+    return []
 
 
 def size(filename: str) -> int:

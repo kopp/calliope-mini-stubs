@@ -31,8 +31,8 @@ class CalliopeSensor:
         """
         Return the x-component of the acceleration.
 
-        Note: For the accelerometer to deliver reasonable values, turn the device
-        on when it is lying flat on its back on an even surface.
+        Note: For the accelerometer to deliver reasonable values, turn the
+        device on when it is lying flat on its back on an even surface.
 
         The x-axis is parallel to the board and points from the USB connector
         (up) to the small connector holes (down).
@@ -40,7 +40,8 @@ class CalliopeSensor:
         The value is positive, if the acceleration is going into the
         direction of the USB connector.
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -48,8 +49,8 @@ class CalliopeSensor:
         """
         Return the y-component of the acceleration.
 
-        Note: For the accelerometer to deliver reasonable values, turn the device
-        on when it is lying flat on its back on an even surface.
+        Note: For the accelerometer to deliver reasonable values, turn the
+        device on when it is lying flat on its back on an even surface.
 
         The y-axis is parallel to the board and points from button B (right)
         to button A (left).
@@ -57,7 +58,8 @@ class CalliopeSensor:
         The value is positive, when the acceleration is going into the
         direction of Button A.
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -65,8 +67,8 @@ class CalliopeSensor:
         """
         Return the z-component of the acceleration.
 
-        Note: For the accelerometer to deliver reasonable values, turn the device
-        on when it is lying flat on its back on an even surface.
+        Note: For the accelerometer to deliver reasonable values, turn the
+        device on when it is lying flat on its back on an even surface.
 
         The z-axis is perpendicular to the board and points from the side
         with buttons, display etc. (top) to the backside (bottom).
@@ -74,7 +76,8 @@ class CalliopeSensor:
         The value is positive, when the acceleration is going into the
         direction of the bottom of the board.
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -83,7 +86,8 @@ class CalliopeSensor:
         Return a tuple with x, y and z components of the acceleration
         -- see the ``get_x``, ``get_y`` and ``get_z`` methods for more info.
 
-        The result is a tuple with three signed integers with 16 bit, i.e. values between -32768 and 32767.
+        The result is a tuple with three signed integers with 16 bit, i.e.
+        values between -32768 and 32767.
         """
         return (int(), int(), int())
 
@@ -99,7 +103,8 @@ class CalliopeSensor:
         The value is positive, if the board is rotated around the x-axis
         such that Button A is moved downwards.
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -113,7 +118,8 @@ class CalliopeSensor:
         The value is positive, if the board is rotated around the y-axis
         such that the USB connector is moved upwards.
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -128,7 +134,8 @@ class CalliopeSensor:
         such that the USB connector is moved to the left (in direction of
         Button A).
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -137,7 +144,8 @@ class CalliopeSensor:
         Return a tuple with x, y and z components of the rotation
         -- see the ``get_x``, ``get_y`` and ``get_z`` methods for more info.
 
-        The result is a tuple with three signed integers with 16 bit, i.e. values between -32768 and 32767.
+        The result is a tuple with three signed integers with 16 bit, i.e.
+        values between -32768 and 32767.
         """
         return (int(), int(), int())
 
@@ -150,7 +158,8 @@ class CalliopeSensor:
         The x-axis is parallel to the board and points from the USB connector
         (up) to the small connector holes (down).
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -161,7 +170,8 @@ class CalliopeSensor:
         The y-axis is parallel to the board and points from button B (right)
         to button A (left).
 
-        The result is a signed integer with 16 bit, i.e. values between -32768 and 32767.
+        The result is a signed integer with 16 bit, i.e. values between -32768
+        and 32767.
         """
         return int()
 
@@ -181,7 +191,7 @@ class CalliopeSensor:
         Return a tuple with x, y and z components of the magnetic field
         -- see the ``get_x``, ``get_y`` and ``get_z`` methods for more info.
 
-        The result is a tuple with three signed integers with 16 bit, i.e. values between -32768 and 32767.
+        The result is a tuple with three signed integers with 16 bit, i.e.
+        values between -32768 and 32767.
         """
         return (int(), int(), int())
-

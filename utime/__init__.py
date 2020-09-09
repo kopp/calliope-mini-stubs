@@ -56,7 +56,8 @@ def ticks_ms() -> int:
 def ticks_us() -> int:
     """
     Return some ticks in microseconds resolution.
-    You can use these ticks to compute an elapsed time in microseconds by using ``ticks_diff``.
+    You can use these ticks to compute an elapsed time in microseconds by using
+    ``ticks_diff``.
     The tick values themselves do not have a well defined meaning.
     They "wrap around" after some period, so make sure to use the
     ``ticks_diff`` and ``ticks_add`` functions when working with them.

@@ -1,4 +1,4 @@
-from typing import overload, List, Any
+from typing import Any, List, overload
 
 
 class MicroBitImage:
@@ -11,8 +11,8 @@ class MicroBitImage:
         from calliope_mini import *
         display.show(Image.HAPPY)
 
-    The following (read only) images are avaliable to use (e.g. ``Image.HEART``).
-    To edit one of them, copy them first, e.g.
+    The following (read only) images are avaliable to use (e.g.
+    ``Image.HEART``).  To edit one of them, copy them first, e.g.
 
         my_image = Image.SMILE.copy()
         my_image.set_pixel(2, 2, 5)
@@ -44,7 +44,7 @@ class MicroBitImage:
      - ``CLOCK9``
      - ``CLOCK10``
      - ``CLOCK11``
-     - ``ALL_CLOCKS``: A tuple containing all clocks (starting at 12, then 1, ...)
+     - ``ALL_CLOCKS``: tuple containing all clocks (12, 1, ...)
      - ``ARROW_N``
      - ``ARROW_NE``
      - ``ARROW_E``
@@ -53,7 +53,8 @@ class MicroBitImage:
      - ``ARROW_SW``
      - ``ARROW_W``
      - ``ARROW_NW``
-     - ``ALL_ARROWS``: A tuple containing all arrows (starting from top, then top rigth, ...)
+     - ``ALL_ARROWS``: A tuple containing all arrows (starting from top, then
+       top rigth, ...)
      - ``TRIANGLE``
      - ``TRIANGLE_LEFT``
      - ``CHESSBOARD``
@@ -129,7 +130,8 @@ class MicroBitImage:
     def get_pixel(self: "MicroBitImage", x: int, y: int) -> int:
         return int()
 
-    def set_pixel(self: "MicroBitImage", x: int, y: int, brightness: int) -> None:
+    def set_pixel(self: "MicroBitImage", x: int, y: int,
+                  brightness: int) -> None:
         """
         Set the pixel at position ``x, y`` to given ``brightness`` which
         must be ``0, 1, ..., 9``.
@@ -167,7 +169,8 @@ class MicroBitImage:
         """Return a copy of the this image."""
         return MicroBitImage()
 
-    def crop(self: "MicroBitImage", x: int, y: int, w: int, h: int) -> "MicroBitImage":
+    def crop(self: "MicroBitImage",
+             x: int, y: int, w: int, h: int) -> "MicroBitImage":
         """
         Return a new image by cropping the picture to a width of ``w`` and a
         height of ``h``, starting with the pixel at column ``x`` and row
