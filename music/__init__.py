@@ -164,7 +164,7 @@ __ALL__ = [
 
 from typing import List, Tuple, Union
 
-from calliope_mini import pin30
+from calliope_mini import MicroBitAnalogDigitalPin, pin30
 
 DADADADUM = 0
 ENTERTAINER = 1
@@ -219,7 +219,7 @@ def get_tempo(self) -> Tuple[int, int]:
 
 
 def play(music: Union[str, List[str]],
-         pin: "MicroBitAnalogDigitalPin" = pin30,
+         pin: MicroBitAnalogDigitalPin = pin30,
          wait: bool = True,
          loop: bool = False) -> None:
     """
@@ -247,7 +247,7 @@ def play(music: Union[str, List[str]],
 
 def pitch(frequency: int,
           duration: int = -1,
-          pin: "MicroBitAnalogDigitalPin" = pin30,
+          pin: MicroBitAnalogDigitalPin = pin30,
           wait: bool = True) -> None:
     """
     Plays a pitch at the integer frequency (in Hz) given for the specified
@@ -262,7 +262,7 @@ def pitch(frequency: int,
     """
 
 
-def stop(pin: "MicroBitAnalogDigitalPin" = pin30) -> None:
+def stop(pin: MicroBitAnalogDigitalPin = pin30) -> None:
     """
     Stops all music playback on a given pin.
     """
