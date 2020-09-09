@@ -15,6 +15,7 @@ __all__ = [
     "magnetometer", "gyrometer", "accelerometer", "sensor",
     "led",
     "i2c",
+    "spi",
     "pin0", "pin1", "pin2", "pin3", "pin4", "pin5", "pin6", "pin7", "pin8",
     "pin9", "pin10", "pin11", "pin12", "pin13", "pin14", "pin15", "pin16",
     "pin17", "pin18", "pin19", "pin20", "pin21", "pin22", "pin23", "pin24",
@@ -37,6 +38,7 @@ from .led import CalliopeLED
 from .pin import MicroBitAnalogDigitalPin, MicroBitDigitalPin, MicroBitTouchPin
 from .i2c import MicroBitI2C
 from .uart import MicroBitUART
+from .spi import MicroBitSPI
 
 
 display = MicroBitDisplay()
@@ -61,6 +63,8 @@ led = CalliopeLED()
 i2c = MicroBitI2C()
 
 uart = MicroBitUART()
+
+spi = MicroBitSPI()
 
 
 # types in source/microbit/microbitpin.cpp
