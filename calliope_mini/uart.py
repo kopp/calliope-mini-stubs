@@ -4,7 +4,7 @@
 
 from typing import List, Optional, Union, overload
 
-from . import MicroBitDigitalPin
+from .pin import MicroBitDigitalPin
 
 
 class MicroBitUART:
