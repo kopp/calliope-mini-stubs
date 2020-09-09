@@ -2,7 +2,11 @@ import move_this_directory_in_path  # Import before setuptools:
 # Since this folder contains a `random` module which conflicts with the
 # system's random module, make sure that the system's module is found when
 # using `import random`.
+
 from setuptools import setup
+
+
+move_this_directory_in_path.was_used_during_import()
 
 
 GITHUB_URL = "https://github.com/kopp/calliope-mini-stubs"
